@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <% for(post of posts) { %>
+        <div class="post">
+            <h3 class="user">userName: <%= post.username %></h3>
+            <h4 class="user">content: <%= post.content %></h4>
+            <p class="user">likes: <%= post.likes %></p>
+            <p class="user">retweets: <%= post.retweets %></p>
+            <p class="user">createdAt: <%= post.createdAt %></p>
+            <a href="/posts/<%= post.id %>">See in Detail</a> &nbsp;&nbsp;
+            <form style="display: inline;" method="post" action="/posts/<%= post.id %>?_method=Delete">
+                <button>Delete</button>
+            </form>
+        </div>
+        
+    <% } %> 
+    <form method="get" action="/posts/new">
+        <button>Create New Post</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in Detail </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Here is you post in Detail:</h1>
+        <div class="post">
+            <h4>Post Id:<%= post.id %></h4>
+            <h3 class="user">userName: <%= post.username %></h3>
+            <h4 class="user">content: <%= post.content %></h4>
+            <p class="user">likes: <%= post.likes %></p>
+            <p class="user">retweets: <%= post.retweets %></p>
+            <p class="user">createdAt: <%= post.createdAt %></p>
+            <a href="/posts">Home</a> &nbsp;&nbsp;&nbsp;
+            <a href="/posts/<%= post.id %>/edit">Edit</a>
+        </div>
+        
+</body>
+</html>
